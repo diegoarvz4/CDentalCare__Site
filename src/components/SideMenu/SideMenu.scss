@@ -1,0 +1,45 @@
+@import '../../color';
+
+.SideMenu {
+  position: fixed;
+  min-width: 100%;
+  height: 100vh;
+  left: 0;
+  background-color: rgba(226, 222, 222, 0.493);
+  z-index: 10;
+  &__Menu {
+    position: relative;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    height: 100%;
+    background-color: $secondary-dark-blue;
+  }
+
+  &__Logo {
+    width: 200px;
+    margin: 0 auto;
+  }
+
+  &__Item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    img {
+      $secondary-blue: #3776e3;
+      width: 20px;
+      height: 20px;
+      margin-right: 10px;
+    }
+    h3 {
+      color: white;
+      font-size: 15px;
+      letter-spacing: 1.5px;
+    }
+  }
+
+  hr {
+    margin: 40px 0;
+  }
+}

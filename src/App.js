@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './App.scss';
 
 import Intro from './components/Intro/Intro';
+import SideMenu from './components/SideMenu/SideMenu';
 import Nav from './components/Nav/Nav';
 import Cover from './components/Cover/Cover';
 import Services from './components/Services/Services';
@@ -30,6 +31,7 @@ const App = () => {
         site 
         ? <Intro />
         : <div className="Site">
+            <SideMenu />
             <Nav />
             <Cover />
             <LineSeaparator />
