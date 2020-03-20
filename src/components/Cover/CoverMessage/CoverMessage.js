@@ -2,7 +2,7 @@ import React from 'react';
 
 
 const CoverMessage = () => { 
-  const title = 'Expertos en el cuidado dental'
+  const title = 'Expertos en tu salud dental'
   const msg = `
   En CDental Care ofrecemos los mejores beneficios
   para tu salud dental. Contamos con expertos profesionales

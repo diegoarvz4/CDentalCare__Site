@@ -1,7 +1,7 @@
 @import '../../color';
 
 .Footer {
-  height: 400px;
+  height: 500px;
   background-color: #183464;
   color: white;
   padding-top: 60px;
@@ -15,9 +15,17 @@
     margin: 0 auto;
   }
 
+  &__Logo {
+    min-width: 200px;
+    max-width: 200px;
+    margin: 0px auto;
+    display: block;
+    margin-bottom: 20px;
+  }
+
   h4 {
     font-weight: bold;
-    font-size: 15px;
+    font-size: 10px;
     text-align: center;
   }
 
