@@ -13,6 +13,7 @@ import LineSeaparator from './components/LineSeparator/LineSeparator';
 const App = () => { 
 
   const [site, setSite] = useState(true);
+  const [sideNav, setNav] = useState(false)
 
   useEffect(() => {
 
@@ -31,7 +32,7 @@ const App = () => {
         site 
         ? <Intro />
         : <div className="Site">
-            <SideMenu />
+            {/*<SideMenu />*/}
             <Nav />
             <Cover />
             <LineSeaparator />

@@ -15,6 +15,7 @@
 
   &__Img {
     width: 100%;
+    display: block;
     margin: 30px 0;
   }
 
@@ -44,6 +45,7 @@
         font-size: 15px;
         border-radius: 10px;
         font-family: 'Biryani', sans-serif;
+        display: block;
       }
     }
     &-Output {
@@ -65,6 +67,7 @@
         font-size: 15px;
         border-bottom: 1px solid #2755a3;
         margin-right: 10px;
+        display: block;
       }
     }
   }
