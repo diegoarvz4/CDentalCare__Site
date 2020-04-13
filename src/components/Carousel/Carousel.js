@@ -14,7 +14,6 @@ export default ({ items }) => {
     }
   )
 
-  console.log(windowWidth)
 
   useEffect(() => {
     if (windowWidth < 480) {
@@ -94,6 +93,7 @@ export default ({ items }) => {
         {
           items.map( item => (
             <span
+              key={item.id}
               style={{
                 backgroundColor: item.priority === current.priority ? '#3776e3' : '#183464'
               }} 

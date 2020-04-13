@@ -9,10 +9,6 @@ import DirectoriesView from '../DirectoriesView/DirectoriesView';
 
 export default () => {
 
-  const scrollToTop = () => {
-    window.scrollTo({top: 0})
-  }
-
   return (
     <>
       <Route exact path="/servicios/pad">

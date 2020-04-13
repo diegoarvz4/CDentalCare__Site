@@ -16,7 +16,7 @@ import Footer from './components/Footer/Footer';
 const App = () => { 
 
   const [site, setSite] = useState(false);
-  const [sideNav, setNav] = useState(false)
+  const [sideNav, setSideNav] = useState(false)
 
   useEffect(() => {
 
@@ -25,6 +25,11 @@ const App = () => {
     }, 2000)
   }, [])
 
+  const sideNavToggle = () => {
+    setSideNav(prev => !prev )
+  }
+  
+
   return (
     <div className="App">
       
@@ -32,8 +37,8 @@ const App = () => {
         site 
         ? <Intro />
         : <div className="Site">
-            {/*<SideMenu />*/}
-            <Nav />
+            { sideNav ? <SideMenu setSideNav={sideNavToggle} /> : null }
+            <Nav setSideNav={sideNavToggle}/>
             <Switch>
               <Route exact path="/">
                 <HomeView />
@@ -42,7 +47,6 @@ const App = () => {
                 <BackNav />
                 <ScreenViews />
               </Route>
-              
             </Switch>
             {/* <Agreements /> */}
             <Footer />

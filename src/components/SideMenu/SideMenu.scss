@@ -5,41 +5,45 @@
   min-width: 100%;
   height: 100vh;
   left: 0;
-  background-color: rgba(226, 222, 222, 0.493);
+  background-color: rgba(243, 243, 243, 0.274);
   z-index: 10;
   &__Menu {
     position: relative;
-    padding: 20px;
+    padding: 36px;
     display: flex;
     flex-direction: column;
     width: 80%;
+    max-width: 320px;
     height: 100%;
-    background-color: $secondary-dark-blue;
-  }
-
-  &__Logo {
-    width: 200px;
-    margin: 0 auto;
+    background-color: $secondary-blue;
   }
 
   &__Item {
     display: flex;
-    align-items: center;
-    margin-bottom: 30px;
+    align-items: flex-end;
+    margin-bottom: 20px;
     img {
-      $secondary-blue: #3776e3;
       width: 20px;
       height: 20px;
-      margin-right: 10px;
+      margin-right: 25px;
     }
     h3 {
       color: white;
+      font-weight: bold;
       font-size: 15px;
       letter-spacing: 1.5px;
+    }
+    &:last-child {
+      margin-top: 20px;
+    }
+    &:hover {
+      cursor: pointer;
     }
   }
 
   hr {
-    margin: 40px 0;
+    margin: 0 auto;
+    width: 70%;
+    
   }
 }

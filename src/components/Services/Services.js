@@ -6,7 +6,7 @@ import padImg from '../../assets/img/pads.svg';
 import specialtyImg from '../../assets/img/especialidades.svg';
 import labImg from '../../assets/img/laboratorio.svg';
 
-const Services = ( { scrollToTop }) => {
+const Services = ( { scrollToTop } ) => {
 
   const services = [
     {
@@ -24,7 +24,7 @@ const Services = ( { scrollToTop }) => {
   ]
 
   return (
-    <div className="Services">
+    <div id="services" className="Services">
       <h2 className="Secondary-Title">Servicios</h2>
       <div className="Services__List">
 

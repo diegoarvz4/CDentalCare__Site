@@ -15,10 +15,10 @@ export default () => {
   return (
     <>
       <Cover />
+      <LineSeaparator  />
+      <Services  scrollToTop={scrollToTop}/>
       <LineSeaparator />
-      <Services scrollToTop={scrollToTop}/>
-      <LineSeaparator />
-      <Directories scrollToTop={scrollToTop}/>
+      <Directories id="directories" scrollToTop={scrollToTop}/>
       <LineSeaparator />
     </>
   )

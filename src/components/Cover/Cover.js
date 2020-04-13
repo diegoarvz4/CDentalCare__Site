@@ -49,7 +49,7 @@ const Cover = () => {
       className="Cover" 
       style={style}
     >
-      <Carousel items={sortItemsByPriority(carouselItems)} />
+      <Carousel  items={sortItemsByPriority(carouselItems)} />
       <Branches 
         locationImg={locationImg} 
         phoneImg={phoneImg} 
