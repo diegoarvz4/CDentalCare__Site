@@ -2,6 +2,24 @@
 
 .App{
   overflow: hidden;
+  margin-top: 50px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.btn {
+  background-color: $secondary-blue;
+  color: white;
+  border: none;
+  padding: 10px;
+  margin: 0 auto;
+  display: block;
+  font-family: 'Biryani', sans-serif;
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 .Site {
@@ -37,6 +55,12 @@
   line-height: 60px;
 }
 
+.Tertiary-Title {
+  color: black;
+  font-size: 20px;
+  text-align: left;
+}
+
 .Subtitle {
   color: $secondary-dark-blue;
   width: 100%;
@@ -51,4 +75,11 @@
   padding: 10px;
   text-align: center;
   line-height: 32px;
+}
+
+.Secondary-Description {
+  font-size: 12px;
+  line-height: 30px;
+  color: gray;
+  text-align: left;
 }

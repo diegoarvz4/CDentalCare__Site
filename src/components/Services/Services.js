@@ -1,11 +1,12 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Services.scss';
 
 import padImg from '../../assets/img/pads.svg';
 import specialtyImg from '../../assets/img/especialidades.svg';
 import labImg from '../../assets/img/laboratorio.svg';
 
-const Services = () => {
+const Services = ( { scrollToTop }) => {
 
   const services = [
     {
@@ -29,10 +30,13 @@ const Services = () => {
 
         {
           services.map((service, idx) => (
-            <div key={idx} className="Services__List-item">
+            <Link 
+              to={`/servicios/${service.title.toLowerCase()}`} 
+              onClick={() => scrollToTop()}
+              key={idx} className="Services__List-item">
               <img src={service.img} alt="Pad"/>
               <h3 className="Subtitle">{service.title}</h3>
-            </div>
+            </Link>
           ))
         }
       </div>

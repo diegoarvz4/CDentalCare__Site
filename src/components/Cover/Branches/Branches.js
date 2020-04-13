@@ -33,6 +33,7 @@ const Branches = ( {locationImg, phoneImg, shareImg } ) => {
           <img src={shareImg} alt="Share" />
         </div>
       </div>
+      <button className="btn">Ver Detalle</button>
     </div>
   )
 };

@@ -1,0 +1,46 @@
+@import '../../color';
+
+@mixin employee-title {
+  font-size: 20px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+@mixin attribute-contact {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+  }
+  &:hover{
+    cursor: pointer;
+  }
+}
+
+
+.Employee {
+  width: 100%;
+  padding: 10px;
+  &__Occupation {
+    color: $secondary-dark-blue;
+    @include employee-title();
+  }
+
+  &__Name {
+    color: $secondary-blue;
+    @include employee-title();
+  }
+
+  &__Email {
+    @include attribute-contact();
+    color: $secondary-dark-gray;
+  }
+
+  &__Phone {
+    @include attribute-contact();
+    color: $secondary-dark-gray;
+  }
+}

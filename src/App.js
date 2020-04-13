@@ -1,18 +1,21 @@
 import React, { useState, useEffect } from 'react';
+import { Switch, Route } from 'react-router-dom';
 import './App.scss';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 import Intro from './components/Intro/Intro';
+import HomeView from './containers/HomeView/HomeView';
+import ScreenViews from './containers/ScreenViews/ScreenViews';
 import SideMenu from './components/SideMenu/SideMenu';
 import Nav from './components/Nav/Nav';
-import Cover from './components/Cover/Cover';
-import Services from './components/Services/Services';
-import Agreements from './components/Agreements/Agreements';
+import BackNav from './components/BackNav/BackNav';
 import Footer from './components/Footer/Footer';
-import LineSeaparator from './components/LineSeparator/LineSeparator';
+
 
 const App = () => { 
 
-  const [site, setSite] = useState(true);
+  const [site, setSite] = useState(false);
   const [sideNav, setNav] = useState(false)
 
   useEffect(() => {
@@ -20,25 +23,28 @@ const App = () => {
     setTimeout(() => {
       setSite(false);
     }, 2000)
-
-    return () => {
-      console.log('will unmount');
-    }
   }, [])
 
   return (
     <div className="App">
+      
       {
         site 
         ? <Intro />
         : <div className="Site">
             {/*<SideMenu />*/}
             <Nav />
-            <Cover />
-            <LineSeaparator />
-            <Services />
-            <LineSeaparator />
-            <Agreements />
+            <Switch>
+              <Route exact path="/">
+                <HomeView />
+              </Route>
+              <Route path="/">
+                <BackNav />
+                <ScreenViews />
+              </Route>
+              
+            </Switch>
+            {/* <Agreements /> */}
             <Footer />
           </div>
       }
