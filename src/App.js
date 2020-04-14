@@ -4,7 +4,7 @@ import './App.scss';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-import Intro from './components/Intro/Intro';
+import SplashIntro from './components/SplashIntro/SplashIntro';
 import HomeView from './containers/HomeView/HomeView';
 import ScreenViews from './containers/ScreenViews/ScreenViews';
 import SideMenu from './components/SideMenu/SideMenu';
@@ -15,28 +15,27 @@ import Footer from './components/Footer/Footer';
 
 const App = () => { 
 
-  const [site, setSite] = useState(false);
-  const [sideNav, setSideNav] = useState(false)
-
-  useEffect(() => {
-
-    setTimeout(() => {
-      setSite(false);
-    }, 2000)
-  }, [])
+  const [site, setSite] = useState(true);
+  const [sideNav, setSideNav] = useState(false);
+  const [fadeOutClass, setFadeOutClass] = useState(' ')
 
   const sideNavToggle = () => {
     setSideNav(prev => !prev )
   }
-  
 
+  const toHome = () => {
+    setFadeOutClass('fadeOut');
+  }
+  
   return (
-    <div className="App">
-      
-      {
-        site 
-        ? <Intro />
-        : <div className="Site">
+    <>
+    { site ?  <SplashIntro 
+                toHome={toHome} 
+                fadeOutClass={fadeOutClass} 
+                setSite={setSite}
+              /> 
+      : <div className="App">
+          <div className="Site">
             { sideNav ? <SideMenu setSideNav={sideNavToggle} /> : null }
             <Nav setSideNav={sideNavToggle}/>
             <Switch>
@@ -51,8 +50,9 @@ const App = () => {
             {/* <Agreements /> */}
             <Footer />
           </div>
-      }
-    </div>
+        </div>
+    }
+    </>  
   )
 }
 

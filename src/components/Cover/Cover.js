@@ -13,25 +13,25 @@ const Cover = () => {
   const carouselItems = [
     {
       id: 1,
-      img_url: 'https://image.shutterstock.com/image-vector/promotion-square-sticker-sign-banner-260nw-1427755229.jpg',
+      img_url: 'https://italiannis.com.mx/wp-content/uploads/2019/08/promociones-boun-giorno-new-italiannis.jpg',
       description: '',
       priority: 1,
     },
     {
       id: 2,
-      img_url: 'https://image.shutterstock.com/image-vector/banner-special-promotion-260nw-753306772.jpg',
+      img_url: 'https://pbs.twimg.com/media/EVHxPtEWoAIwtCB.jpg',
       description: '',
       priority: 2,
     },
     {
       id: 3,
-      img_url: 'https://images.clarin.com/2019/10/04/the-legend-of-zelda-link___6IpsPC-f_1200x630__1.jpg',
+      img_url: 'https://static.promodescuentos.com/pepperpdimages/threads/thread_full_screen/default/79695_1.jpg',
       description: '',
       priority: 3,
     },
     {
       id: 4,
-      img_url: 'https://media.vandal.net/i/1200x630/3-2020/20203171149312_1.jpg',
+      img_url: 'https://promociondescuentos.com/wp-content/uploads/2016/04/game-planet-descuento-juegos-ps4-1280x720.jpg',
       description: '',
       priority: 4,
     }

@@ -3,9 +3,11 @@ import './Carousel.scss';
 
 export default ({ items }) => {
 
+  const initialWidthItem = 640;
+
   const [current, setCurrent] = useState(items[0])
   const [windowWidth] = useState(window.innerWidth);
-  const [carouselWidth, setCarouselWidth] = useState(480)
+  const [carouselWidth, setCarouselWidth] = useState(initialWidthItem)
   const [position, setPosition] = useState(0);
   const [carouselTransform, setCarouselTransform] = useState(
     {
@@ -16,7 +18,7 @@ export default ({ items }) => {
 
 
   useEffect(() => {
-    if (windowWidth < 480) {
+    if (windowWidth < initialWidthItem) {
       setCarouselWidth(windowWidth)
     }
   },[windowWidth])
@@ -54,8 +56,10 @@ export default ({ items }) => {
               style={
                 {
                   backgroundImage: `url(${item.img_url})`,
+                  backgroundSize: 'cover',
                   order: `${item.priority}`,
-                  width: carouselWidth
+                  width: carouselWidth,
+                  height: carouselWidth / 2
                 }
               } 
             />

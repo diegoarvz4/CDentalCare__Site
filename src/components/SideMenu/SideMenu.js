@@ -45,7 +45,7 @@ const SideMenu = ( { setSideNav }) => {
               onClick={setSideNav}
               key={idx} 
               className="SideMenu__Item">
-              <img src={item.img} alt={item.title} />
+              <img className="fadeIn" src={item.img} alt={item.title} />
               <h3>{item.title}</h3>
             </a>
           ))
@@ -55,7 +55,7 @@ const SideMenu = ( { setSideNav }) => {
             href={'/'}
             onClick={setSideNav}
             className="SideMenu__Item">
-            <img src={insuranceImg} alt="" />
+            <img className="fadeIn" src={insuranceImg} alt="" />
             <h3>Red de Seguros</h3>
           </a>
       </div>

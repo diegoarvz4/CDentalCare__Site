@@ -1,4 +1,5 @@
 @import './color';
+@import './base';
 
 .App{
   overflow: hidden;
@@ -24,8 +25,13 @@ a {
 
 .Site {
   width: 100%;
-  max-width: 480px;
+  max-width: $bp-medium;
   margin: 0 auto;
+  animation-name: fadeIn;
+  animation-duration: 0.7s;
+}
+
+.fadeIn {
   animation-name: fadeIn;
   animation-duration: 0.7s;
 }
@@ -33,6 +39,16 @@ a {
 @keyframes fadeIn {
   from {opacity: 0;}
   to {opacity: 1;}
+}
+
+.fadeOut {
+  animation: 1s fadeOut;
+}
+
+
+@keyframes fadeOut {
+  from {opacity: 1;}
+  to {opacity: 0;}
 }
 
 .Alert-Title {

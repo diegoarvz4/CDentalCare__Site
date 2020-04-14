@@ -1,4 +1,5 @@
 @import '../../color';
+@import '../../base';
 
 .Cover {
   min-height: 500px;
@@ -24,9 +25,11 @@
 
 .Branches {
   width: 100%;
+  margin: 0 auto;
+  max-width: $bp-small / 2;
   &__Selector {
     &-Input {
-      display: flex;
+      @include flex-mixin;
       width: 100%;
       justify-content: center;
       margin-bottom: 40px;
