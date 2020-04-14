@@ -24,51 +24,57 @@
 }
 
 .Branches {
+  $img-branches: ($bp-small / 2) * 0.05;
+  @mixin img-branch-top-offset {
+    position: relative;
+    top: 4px;
+  }
   width: 100%;
   margin: 0 auto;
   max-width: $bp-small / 2;
   &__Selector {
     &-Input {
-      @include flex-mixin;
-      width: 100%;
-      justify-content: center;
-      margin-bottom: 40px;
+      margin-bottom: 22px;
       img {
-        width: 20px;
+        display: inline-block;
+        width: $img-branches;
         margin-right: 10px;
+        @include img-branch-top-offset;
       }
       select {
-        width: 70%;
+        display: inline-block;
+        width: ($bp-small / 2) * 0.9;
         max-height: 40px;
+        background-color: white;
         padding: 8px;
         border: none;
         font-weight: bold;
         font-size: 15px;
         border-radius: 10px;
         font-family: 'Biryani', sans-serif;
-        display: block;
       }
     }
     &-Output {
-      display: flex;
       width: 100%;
-      justify-content: center;
       margin-bottom: 40px;
       img {
-        width: 25px;
+        display: inline-block;
+        width: $img-branches;
+        @include img-branch-top-offset;
         &:first-child {
           margin-right: 10px;
+          transform: rotate(125deg);
         }
       }
       span {
-        width: 60%;
+        display: inline-block;
+        width: ($bp-small / 2) * 0.8;
         padding: 8px;
         border: none;
         font-weight: bold;
         font-size: 15px;
         border-bottom: 1px solid #2755a3;
         margin-right: 10px;
-        display: block;
       }
     }
   }
