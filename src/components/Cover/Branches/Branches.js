@@ -68,11 +68,11 @@ const Branches = ( {locationImg, phoneImg, shareImg } ) => {
             }
           </select>
         </div>
-        <div className="Branches__Selector-Output">
+        {/* <div className="Branches__Selector-Output">
           <img src={phoneImg} alt="Phone" />
           <span>{branch.phone}</span>
           <img src={shareImg} alt="Share" />
-        </div>
+        </div> */}
       </div>
       <button className="btn">
         Ver Detalle

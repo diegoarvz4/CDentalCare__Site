@@ -4,7 +4,7 @@ import emailImg from '../../assets/img/email.svg';
 import phoneImg from '../../assets/img/phone.svg';
 
 
-export default ( { attribute, name, phone, email }) => {
+export default ( { attribute, name, email }) => {
   return (
     <div className="Employee">
       <h3 className="Employee__Occupation">{attribute}</h3>
@@ -12,10 +12,6 @@ export default ( { attribute, name, phone, email }) => {
       <div className="Employee__Email">
         <img src={emailImg} alt="Email"/>
         <span>{email}</span>
-      </div>
-      <div className="Employee__Phone">
-        <img src={phoneImg} alt="Phone"/>
-        <span>{phone}</span>
       </div>
     </div>
   )

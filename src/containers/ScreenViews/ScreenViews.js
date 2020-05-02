@@ -5,7 +5,7 @@ import PadServicesView from '../PadServicesView/PadServicesView';
 import SpecialtiesView from '../SpecialtiesView/SpecialtiesView';
 import LaboratoriesView from '../LaboratoriesView/LaboratoriesView';
 import DirectoriesView from '../DirectoriesView/DirectoriesView';
-
+import MedicalStaff from '../MedicalStaff/MedicalStaff';
 
 export default () => {
 
@@ -20,8 +20,11 @@ export default () => {
       <Route exact path="/servicios/laboratorios">
         <LaboratoriesView />
       </Route>
-      <Route path="/directorios/:id">
+      <Route path="/directorios/administracion">
         <DirectoriesView />
+      </Route>
+      <Route path="/directorios/personal_medico">
+        <MedicalStaff />
       </Route>
     </>
   )

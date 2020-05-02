@@ -4,7 +4,7 @@ import Cover from '../../components/Cover/Cover';
 import LineSeaparator from '../../components/LineSeparator/LineSeparator';
 import Services from '../../components/Services/Services';
 import Directories from '../../components/Directories/Directories';
-
+import MemberBenefits from '../../components/MemberBenefits/MemberBenefits';
 
 export default () => {
 
@@ -19,6 +19,8 @@ export default () => {
       <Services  scrollToTop={scrollToTop}/>
       <LineSeaparator />
       <Directories id="directories" scrollToTop={scrollToTop}/>
+      <LineSeaparator />
+      <MemberBenefits />
       <LineSeaparator />
     </>
   )
