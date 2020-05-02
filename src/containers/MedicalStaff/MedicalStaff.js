@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 
 import MedicalStaffMember from '../../components/MedicalStaffMember/MedicalStaffMember';
 
+import MockCard from '../../components/MockCard/MockCard';
+
 export default () => {
 
   const [medicalStaff, setMedicalStaff] = useState([]);
@@ -18,8 +20,9 @@ export default () => {
   return (
     <div className="DirectoriesView">
       <h1 className="Primary-Title">Directorio Médico</h1>
-      {
-        medicalStaff.map(medicalStaffMemember => (
+      
+      { medicalStaff.length > 0 
+        ? medicalStaff.map(medicalStaffMemember => (
           <MedicalStaffMember 
             key={medicalStaffMemember.id} 
             profession={medicalStaffMemember.profession} 
@@ -28,6 +31,9 @@ export default () => {
             graduate={medicalStaffMemember.graduate}
             license={medicalStaffMemember.license}
           />
+        ))
+        : ['','','',''].map((_, idx) => (
+          <MockCard key={idx}/>
         ))
       }
     </div>

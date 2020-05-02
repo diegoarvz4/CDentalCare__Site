@@ -51,6 +51,28 @@ a {
   to {opacity: 0;}
 }
 
+
+.animationMock {
+  animation-name: loadingMock;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes loadingMock {
+  0% {
+    opacity: 0.8;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 0.8;
+  }
+
+}
+
 .Alert-Title {
   display: block;
   font-weight: bold;

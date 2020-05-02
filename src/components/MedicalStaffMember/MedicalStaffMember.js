@@ -1,16 +1,16 @@
 import React from 'react';
-import '../Employee/Employee.scss'
+import * as styles from './MedicalStaffMember.module.scss';
 import emailImg from '../../assets/img/email.svg';
 
 
 export default ( { profession, name, email, graduate, license }) => {
   return (
-    <div className="Employee">
-      <h3 className="Employee__Occupation">{profession}</h3>
-      <h2 className="Employee__Name">{name}</h2>
-      <h3 className="Employee__Occupation">Egresado(a) de {graduate}</h3>
-      <h3 className="Employee__Occupation">Cédula Profesional: {license}</h3>
-      <div className="Employee__Email">
+    <div className={`${styles.MedicalStaffMember} fadeIn`}>
+      <h3>{profession}</h3>
+      <h2>{name}</h2>
+      <h4>Egresado(a) de {graduate}</h4>
+      <h4>Cédula Profesional: {license}</h4>
+      <div className={styles.Email}>
         <img src={emailImg} alt="Email"/>
         <span>{email}</span>
       </div>

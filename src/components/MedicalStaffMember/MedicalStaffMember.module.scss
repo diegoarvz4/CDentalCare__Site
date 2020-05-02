@@ -1,0 +1,53 @@
+@import '../../color';
+
+@mixin employee-title {
+  font-size: 15px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+@mixin attribute-contact {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+  }
+  &:hover{
+    cursor: pointer;
+  }
+}
+
+
+.MedicalStaffMember {
+  width: 50%;
+  display: inline-block;
+  padding: 10px;
+  margin-top: 60px;
+  margin-bottom: 30px;
+  
+  h2 {
+    color: $secondary-blue;
+    @include employee-title();
+    margin-bottom: 20px;
+  }
+  
+  h3 {
+    color: $secondary-dark-blue;
+    @include employee-title();
+  }
+
+  h4 {
+    font-size: 12px;
+    margin-top: 15px;
+  }
+}
+
+.Email {
+  @include attribute-contact();
+  color: $secondary-dark-gray;
+  margin-top: 10px;
+  font-size: 12px;
+}
